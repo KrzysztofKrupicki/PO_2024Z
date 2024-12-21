@@ -25,14 +25,17 @@ public class Main {
             try {
                 n2 = scanner.nextInt();
             } catch (InputMismatchException e) {
-                System.out.println("Wprowadzono coś innego niż liczbę. Wprowadź liczbę ponownie");
+                System.out.println("Wprowadzono coś innego niż liczbę. Wprowadź liczbę ponownie.");
                 dzielenie();
                 return;
             }
 
+            if(n2 == 0){
+                throw new ArithmeticException("Dzielenie przez 0 nie jest dozwolone");
+            }
             System.out.println("Wynik " + n1 + "/" + n2 + " = " + n1*1.0/n2);
         } catch (ArithmeticException e) {
-            System.out.println("Dzielenie przez 0 nie jest dozwolone");
+            System.out.println(e.getMessage());
             dzielenie();
         }
     }
