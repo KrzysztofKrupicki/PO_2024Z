@@ -1,5 +1,6 @@
 ### Ćwiczenia 1
 Poznanie podstaw języka i klas.
+
 ### Ćwiczenia 2
 #### Zadanie 1
 Napisz program, który tworzy listę tablicową 10 liczb całkowitych, a następnie wyświetla je w konsoli w porządku odwrotnym do wprowadzenia.
@@ -144,3 +145,39 @@ W jednym projekcie wykonaj czynności:
 - A. Stwórz abstrakcyjną klasę `Game` zawierającą publiczną abstrakcyjną metodę `getRating()`, która nie przyjmuje argumentów i zwraca `double`. Klasę umieść w pakiecie `entertainment`.
 - B. Utwórz dwie klasy pochodne od `Game`: `StrategyGame` i `AdventureGame`. W obu klasach nadpisz metodę `getRating()`. Dla `StrategyGame` niech zwraca ocenę `8.5`, a dla `AdventureGame` niech zwraca ocenę `7.3`.
 - C. W klasie `TestGame` w pakiecie `entertainment` utwórz listę tabllicową typu `Game` i zainicjalizuj ją 5 instancjami `StrategyGame` i `AdventureGame`. Iteruj po liście tablicowej wywołując metodę `getRating()` dla każdej gry (wyświetl oceny na standardowym wyjściu).
+
+### Ćwiczenie 10
+#### Zadanie 1
+Napisz klasę `Movie`, która zawiera pola: `title` (typu `String`), `director` (typu `String`) i `genre` (typu `String`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Movie` były sortowane według jednego kryterium: rosnąco według długości tytułu. Stwórz listę tablicową 4 obiektów klasy `Movie` i posortuj ją według sprecyzowanego kryterium.
+#### Zadanie 2
+Napisz klasę `Order`, która zawiera pola: `productName` (typu `String`), `quantity` (typu `int`) i `unitPrice` (typu `double`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy qOrderq były sortowane według jednego kryterium: malejąco według ceny jednostkowej, a przy równości sortowane były rosnąco według ilości. Stwórz listę tablicową 4 obiektów klasy `Order` i posortuj ją według sprecyzowanego kryterium.
+#### Zadanie 3
+Napisz klasę `Item`, która zawiera pola: `name` (typu `String`), `weight` (typu `double`) i `price` (typu `double`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Item` były sortowane rosnąco według wagi. Stwórz tablicę 4 obiektów klasy `Item` i posortuj ją według sprecyzowanego kryterium.
+#### Zadanie 4
+Napisz klasę `Pracownik` z polami `imie` (`String`), `pensja` (`double`) i `dataZatrudnienia` (`LocalDate`). Napisz klasę implementującą interfejs `Comparator`, która porównuje pracowników na podstawie pensji. Stwórz tablicę 5 pracowników i posortuj ją według pensji.
+#### Zadanie 5
+Napisz klasę `Produkt` z polami `nazwa` (`String`), `cena` (`double`) i `dataWaznosci` (`LocalDate`). Napisz klasę implementującą interfejs `Comparator`, która porównuje produkty na podstawie daty ważności. Stwórz listę 5 produktów i posortuj ją według daty ważności.
+#### Zadanie 6
+Napisz klasę `Person` z polami `firstName` (typu `String`), `lastName` (typu `String`) oraz `birthDate` (typu `LocalDate`). Zaimplementuj dwie klasy implementujące generyczny interfejs `Comparator`: `LastNameComparator` do porównywania obiektów po polu `lastName` (alfabetycznie od A do Z) oraz `BirthDateComparator` do porównywania obiektów po polu `birthDate` (od najstarszej do najmłodszej osoby). Stwórz tablicę 5 obiektów klasy `Person` i posortuj ją zgodnie z oboma kryteriami (najpierw po nazwisku, a następnie przy równości po dacie urodzenia).
+#### Zadanie 7
+Napisz klasę `CreditCard` z trzema polami: `cardNumber` (`String`), `holderName` (`String`) i `expiryDate` (typu `LocalDate`). Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy. W metodzie `main()` utwórz obiekt `CreditCard`, sklonuj go, a następnie zmień datę wygaśnięcia (`expiryDate`) oryginalnej karty kredytowej. Wyświetl datę wygaśnięcia obu kart, aby zobaczyć, czy są niezależne.
+#### Zadanie 8
+Napisz klasę `Employee` z dwoma polami: `name` (`String`) i `salaries` (tablica 12 zmiennych typu `double`, reprezentująca zarobki za każdy miesiąc). Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy. W metodzie `main()` utwórz obiekt `Employee`, sklonuj go, a następnie zmień zarobki na pozycji 5 (czerwiec) oryginalnego pracownika. Wyświetl zarobki obu pracowników, aby zobaczyć, czy są niezależne.
+#### Zadanie 9
+Napisz klasę `Smartphone` z trzema polami: `brand` (`String`), `model` (`String`) i `productionDate` (typu `Date`). Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy. W metodzie `main()` utwórz obiekt `Smartphone`, sklonuj go, a następnie zmień datę produkcji oryginalnego smartfona. Wyświetl datę produkcji obu smartfonów, aby zobaczyć, czy są niezależne.
+
+### Ćwiczenie 11
+#### Zadanie 0_2
+Napisz program, który definiuje metodę `checkAge(int age)`. Metoda ta powinna rzucić wyjątek `IllegalArgumentException` z odpowiednim komunikatem, jeśli podany wiek jest mniejszy niż 18. W głównej metodzie programu (`main`) wywołaj `checkAge` z różnymi wartościami i obsłuż wyjątek, wyświetlając stosowny komunikat dla użytkownika.
+#### Zadanie 1
+Stwórz interfejs o nazwie `MyComparator`, który będzie zawierał metodę `compare(int a, int b): int`. Metoda ta powinna zwrócić -1, jeśli `a < b`, 0 jeśli `a == b` i 1 jeśli `a > b`. Następnie stwórz klasę `TestMyComparator`, która będzie implementować ten interfejs. W klasie tej zaimplementuj metodę `compare` zgodnie z jej opisem.
+#### Zadanie 2
+Załóżmy, że mamy interfejs `MusicPlayer` z metodami `turnOn()`, `turnOff()` i `nextTrack()`. Stwórz klasę `Radio`, która będzie implementować ten interfejs. W metodzie `turnOn()` powinien zostać wydrukowany komunikat “Radio włączone”, w metodzie `turnOff()` - “Radio wyłączone”, a w `nextTrack()` - “Zmieniono stację radiową”.
+#### Zadanie 3
+Utwórz interfejs `Authentication` z trzema metodami abstrakcyjnymi: `login(String username, String password)` zwracającą `boolean`, `logout()` zwracającą `void` oraz `resetPassword(String username, String oldPassword, String newPassword)` zwracającą `boolean`. Stwórz dwie klasy `UserAuthentication` i `AdminAuthentication`, które implementują ten interfejs. W klasie AuthenticationTest przetestuj implementacje metod dla obiektów obu klas.
+#### Zadanie 4
+Zaprojektuj interfejs `Sensor` z trzema metodami abstrakcyjnymi: `readValue()` zwracającą `double`, `getStatus()` zwracającą `String` oraz `reset()` zwracającą `void`. Stwórz dwie klasy `TemperatureSensor` i `PressureSensor`, które implementują ten interfejs. W klasie `SensorTest` przetestuj działanie metod dla obiektów z obu klas.
+#### Zadanie 5
+Napisz program, który prosi użytkownika o wpisanie dwóch liczb, a następnie dzieli pierwszą liczbę przez drugą. Program powinien obsługiwać dwa rodzaje wyjątków: `ArithmeticException` w przypadku dzielenia przez zero i `InputMismatchException`, gdy użytkownik wprowadzi coś innego niż liczby. W obu przypadkach należy wyświetlić stosowny komunikat błędu i poprosić użytkownika o ponowne wprowadzenie danych. Wykorzystaj typ `int`.
+#### Zadanie 6
+Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`. Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail). W metodzie `main` przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
