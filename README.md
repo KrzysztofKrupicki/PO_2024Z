@@ -150,7 +150,7 @@ W jednym projekcie wykonaj czynności:
 #### Zadanie 1
 Napisz klasę `Movie`, która zawiera pola: `title` (typu `String`), `director` (typu `String`) i `genre` (typu `String`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Movie` były sortowane według jednego kryterium: rosnąco według długości tytułu. Stwórz listę tablicową 4 obiektów klasy `Movie` i posortuj ją według sprecyzowanego kryterium.
 #### Zadanie 2
-Napisz klasę `Order`, która zawiera pola: `productName` (typu `String`), `quantity` (typu `int`) i `unitPrice` (typu `double`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy qOrderq były sortowane według jednego kryterium: malejąco według ceny jednostkowej, a przy równości sortowane były rosnąco według ilości. Stwórz listę tablicową 4 obiektów klasy `Order` i posortuj ją według sprecyzowanego kryterium.
+Napisz klasę `Order`, która zawiera pola: `productName` (typu `String`), `quantity` (typu `int`) i `unitPrice` (typu `double`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Order` były sortowane według jednego kryterium: malejąco według ceny jednostkowej, a przy równości sortowane były rosnąco według ilości. Stwórz listę tablicową 4 obiektów klasy `Order` i posortuj ją według sprecyzowanego kryterium.
 #### Zadanie 3
 Napisz klasę `Item`, która zawiera pola: `name` (typu `String`), `weight` (typu `double`) i `price` (typu `double`). Zaimplementuj interfejs `Comparable` w taki sposób, aby obiekty klasy `Item` były sortowane rosnąco według wagi. Stwórz tablicę 4 obiektów klasy `Item` i posortuj ją według sprecyzowanego kryterium.
 #### Zadanie 4
