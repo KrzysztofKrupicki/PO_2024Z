@@ -181,3 +181,38 @@ Zaprojektuj interfejs `Sensor` z trzema metodami abstrakcyjnymi: `readValue()` z
 Napisz program, który prosi użytkownika o wpisanie dwóch liczb, a następnie dzieli pierwszą liczbę przez drugą. Program powinien obsługiwać dwa rodzaje wyjątków: `ArithmeticException` w przypadku dzielenia przez zero i `InputMismatchException`, gdy użytkownik wprowadzi coś innego niż liczby. W obu przypadkach należy wyświetlić stosowny komunikat błędu i poprosić użytkownika o ponowne wprowadzenie danych. Wykorzystaj typ `int`.
 #### Zadanie 6
 Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`. Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail). W metodzie `main` przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
+
+### Ćwiczenia 12
+#### Zadanie 0
+Stwórz prostą klasę generyczną `Box`, która może przechowywać obiekt dowolnego typu. Klasa powinna zawierać metodę `set`, aby ustawić obiekt, oraz metodę `get`, aby go pobrać.
+
+#### Zadanie 1
+Stwórz klasę generyczną `Triple<T, U, V>`, która może przechowywać trzy obiekty różnych typów. Zaimplementuj metody `getFirst()`, `getSecond()` i `getThird()` do pobierania odpowiednio pierwszego, drugiego i trzeciego elementu.
+#### Zadanie 2
+Stwórz klasę generyczną `Counter<T>`, która będzie zliczać ilość dodanych elementów określonego typu. Klasa powinna mieć metodę `add(T element)`, która dodaje element do wewnętrznej struktury, oraz metodę `getCount()`, która zwraca liczbę dodanych elementów.
+#### Zadanie 3
+Napisz generyczną metodę `isEqual`, która przyjmuje dwa dowolne obiekty tego samego typu i zwraca `true`, jeśli są one równe, w przeciwnym razie `false`.
+#### Zadanie 4
+Stwórz klasę generyczną `Pair`, która przechowuje dwie wartości dowolnego typu. Klasa powinna mieć dwie metody: `getFirst()`, która zwraca pierwszy element pary, i `getSecond()`, która zwraca drugi element pary.
+#### Zadanie 5
+Napisz statyczną metodę generyczną `swap`, która przyjmuje tablicę dowolnego typu i dwa indeksy, a następnie zamienia miejscami elementy w tej tablicy pod wskazanymi indeksami. Metoda powinna działać dla tablicy każdego typu. Przykładowe wywołanie metody: `swap(myArray, 0, 2);`, gdzie `myArray` to tablica typu `Integer[]` lub dowolnego innego typu. Zabezpiecz metodę tak, aby nie można było jej wywołać z indeksami spoza zakresu tablicy.
+ #### Zadanie 6
+Napisz statyczną metodę generyczną `maxValue`, która przyjmuje tablicę elementów typu generycznego `T`, gdzie `T` rozszerza `Comparable<T>`. Metoda powinna zwracać największy element z tablicy. Upewnij się, że metoda nie akceptuje pustej tablicy (o zerowej liczbie elementów). Przetestuj metodę na tablicach zawierających różne typy porównywalnych obiektów, jak `Integer`, `Float`, czy `String`.
+ #### Zadanie 7
+Utwórz statyczną metodę generyczną `sumElements`, która przyjmuje kolekcję elementów typu generycznego `T` i zwraca ich sumę. Przetestuj tę metodę na kolekcji typu `Integer` oraz `Float`.
+ #### Zadanie 8
+Wykonaj poniższe czynności:
+1. Stwórz interfejs `Printer` z metodą `drukuj(String tekst)`.
+2. Utwórz klasę `StandardowyPrinter`, która implementuje `Printer` i wypisuje tekst na konsolę. 
+3. Utwórz klasę `Biuro`, która posiada prywatne pole typu `Printer`. W konstruktorze `Biuro` przyjmij `Printer` jako argument i przypisz go do pola. Dodaj metodę `drukujDokument(String tekst)`, która będzie delegować zadanie drukowania do obiektu klasy `Printer`.
+#### Zadanie 9
+Wykonaj poniższe czynności:
+1. Stwórz interfejs `Silnik` z metodami `uruchom()` i `zatrzymaj()`.
+2. Utwórz klasę `BenzynowySilnik`, która implementuje `Silnik` i symuluje działanie silnika na benzynę.
+3. Utwórz klasę `Samochód`, która posiada prywatne pole typu `Silnik`. W konstruktorze przyjmij `Silnik` jako argument. Dodaj metody `start()` i `stop()`, które będą delegować odpowiednio zadanie uruchomienia i zatrzymania silnika do obiektu klasy `Silnik`.
+ #### Zadanie 10
+Wykonaj poniższe czynności:
+1. Stwórz interfejs `Powiadomienie` z metodą `wyślij(String wiadomość)`.
+2. Utwórz klasę `Email`, która implementuje `Powiadomienie` i symuluje wysyłanie wiadomości e-mail.
+3. Utwórz klasę `Użytkownik`, która posiada prywatne pole typu `Powiadomienie`. W konstruktorze przyjmij `Powiadomienie` jako argument. Dodaj metodę `powiadomOModernizacji(String informacja)`, która będzie delegować zadanie wysyłania powiadomienia do obiektu klasy `Powiadomienie`.
+ 
