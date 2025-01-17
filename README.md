@@ -127,7 +127,7 @@ Wykonaj poniższe czynności:
 - Dodaj metodę `equals()`, która porównuje dwa pojazdy na podstawie ich pól `brand`, `model` i `yearOfProduction`.
 - Dodaj metodę `hashCode()`, która generuje kod hash dla odpowiedniego obiektu. Metoda ta powinna być zgodna z metodą `equals()`
 
-### Ćwiczenie 8
+### Ćwiczenie 8 - kolokwium 1
 Kolokwium z poprzednich ćwiczeń prócz ćwiczeń z rekordów tj. ćwiczenie 6.
 
 ### Ćwieczenie 9
@@ -182,7 +182,7 @@ Napisz program, który prosi użytkownika o wpisanie dwóch liczb, a następnie 
 #### Zadanie 6
 Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`. Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail). W metodzie `main` przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
 
-### Ćwiczenia 12
+### Ćwiczenie 12
 #### Zadanie 0
 Stwórz prostą klasę generyczną `Box`, która może przechowywać obiekt dowolnego typu. Klasa powinna zawierać metodę `set`, aby ustawić obiekt, oraz metodę `get`, aby go pobrać.
 
@@ -216,3 +216,18 @@ Wykonaj poniższe czynności:
 2. Utwórz klasę `Email`, która implementuje `Powiadomienie` i symuluje wysyłanie wiadomości e-mail.
 3. Utwórz klasę `Użytkownik`, która posiada prywatne pole typu `Powiadomienie`. W konstruktorze przyjmij `Powiadomienie` jako argument. Dodaj metodę `powiadomOModernizacji(String informacja)`, która będzie delegować zadanie wysyłania powiadomienia do obiektu klasy `Powiadomienie`.
  
+### Ćwiczenie 13 - powtórka przed drugim kolokwium
+#### Zadanie 1
+Wykonaj poniższe czynności:
+1. Stwórz interfejs `Silnik` z metodami `uruchom()` i `zatrzymaj()`.
+2. Utwórz klasę `BenzynowySilnik`, która implementuje `Silnik` i symuluje działanie silnika na benzynę.
+3. Utwórz klasę `Samochód`, która posiada prywatne pole typu `Silnik`. W konstruktorze przyjmij `Silnik` jako argument. Dodaj metody `start()` i `stop()`, które będą delegować odpowiednio zadanie uruchomienia i zatrzymania silnika do obiektu klasy `Silnik`.
+4. Utwórz nową klasę `SilnikDiesel`, symulującą działanie silnika dieslowego. Następnie stwórz nowy samochód wyposażony w ten rodzaj silnika.
+#### Zadanie 2
+Napisz klasę VideoGame z trzema polami: `title` (`String`), `genre` (`String`) i `releaseDate` (typu `LocalDate`). Zaimplementuj interfejs `Cloneable` i nadpisz metodę `clone()`, aby móc klonować obiekty tej klasy. W metodzie `main()` utwórz obiekt `VideoGame`, sklonuj go, a następnie zmień datę wydania (`releaseDate`) oryginalnej gry.
+#### Zadanie 3
+Zaprojektuj i zaimplementuj klasę wyjątku `NiepoprawnyFormatDanychException`, która będzie rozszerzać klasę `Exception`. Następnie napisz metodę `sprawdzFormatDanych(String dane)`, która rzuci wyjątek `NiepoprawnyFormatDanychException`, jeśli podany ciąg znaków nie odpowiada określonemu wzorcowi (np. nie jest adresem e-mail). W metodzie main przetestuj działanie tej metody, obsługując wyjątek i informując użytkownika o błędzie.
+#### Zadanie 4
+Stwórz generyczną klasę `GenericQueue<T>`, która implementuje prostą kolejkę. Klasa powinna mieć metody `enqueue(T element)`, która dodaje element do kolejki, i `dequeue()`, która usuwa i zwraca element z początku kolejki.
+
+### Ćwiczenie 14 - kolokwium 2
